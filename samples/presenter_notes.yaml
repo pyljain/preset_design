@@ -1,0 +1,25 @@
+version: v1.0.0
+name: presenter_notes
+prompt: |
+  Please generate presenter notes for this presentation.
+
+  Output should be in the following format:
+
+  Slide 1:
+  -----
+  These are what I should say
+  -----
+
+  Slide 2:
+  -----
+  These are what I should say
+  -----
+
+  ```
+  {{ presentation }}
+  ```
+
+inputs:
+- name: presentation
+  question: Could you please upload your presentation?
+  type: document

@@ -1,0 +1,19 @@
+version: v1.0.0
+name: comparison
+prompt: |
+  Please compare the following documents
+
+  ```doc1
+  {{first_document}}
+  ```
+
+  ```doc2
+  {{second_document}}
+  ```
+inputs:
+- name: first_document
+  question: Please upload your first document
+  type: document
+- name: second_document
+  question: Please upload your second document
+  type: document

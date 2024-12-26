@@ -1,0 +1,13 @@
+version: v1.0.0
+name: release_notes
+prompt: |
+  Please generate release notes for this app based on the following data
+
+  ```
+  {{ description }}
+  ```
+
+inputs:
+- name: description
+  question: Could you please provide a short description of what is in the release?
+  type: string

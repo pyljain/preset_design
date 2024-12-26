@@ -1,0 +1,18 @@
+version: v1.0.0
+name: translate
+prompt: |
+  Please translate the following document into {{ language }}
+
+  ```
+  {{document}}
+  ```
+
+inputs:
+- name: document
+  question: Please upload your document
+- name: language
+  question: Please enter the target language
+  type: options
+  options:
+  - Spanish
+  - German
