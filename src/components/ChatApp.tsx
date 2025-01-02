@@ -124,7 +124,17 @@ export default function ChatApp() {
               ref={textareaRef}
               placeholder="Type / to see available commands..."
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => {
+                setMessage(e.target.value)
+                const value = e.target.value
+                console.log('value', value)
+                const preset = presets.filter(preset => 
+                  preset.slashCommand.toLowerCase() == value
+                )
+                if (preset.length > 0) {
+                  handleCommandSelect(preset[0])
+                }
+              }}
               className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none min-h-[80px]"
               rows={3}
             />
